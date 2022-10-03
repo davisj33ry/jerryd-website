@@ -1,36 +1,67 @@
 body {
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+    font-size: 16px;
 
-/* class hero stles */
+}
+
+/* header styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    justify-content: right;
+    text-align: -webkit-right;}
+
+.header h1 {
+    font-size: 200%;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    background-color: aqua;
+    color: blue;
+    margin: 0;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 100%;
+    text-align: center;
+}
+
+.header li {
+    list-style: none;
+    width: 150px;
+    margin: 0;
+}
+
+/* class hero styles */
 .hero {
     display: flex;
-    height: 100vh;
+    height: 300px;
     width: 100vw;
     margin-top: 0;
     margin-bottom: 0;
-    background-image: url("../images/mnbk-skyline.jpeg");
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/mnbk-skyline.jpeg");
+    background-size: auto;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    align-items: center;
-    justify-content: center;
+    color: white;
     flex-direction: column;
-
 }
 
-.hero h1 {
-    padding: 0;
-    font-size: 36px;
-    line-height: normal;
-    width: 300px;
-    height: 30px;
+.hero h2 {
+    font-size: 125%;
+    text-align: right;
 }
 
 .hero p {
-    font-size: 30px;
-    margin: 0;
-    width: 300px;
-    height: 80px;
+    font-size: 100%;
+    align-content: center;
 }
+
