@@ -1,67 +1,123 @@
-body {
-    margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    scroll-behavior: smooth;
-    font-size: 16px;
+:root {
+  --richblack: #02111b;
+  --onynx: #3f4045;
+  --raisinblack: #30292f;
+  --cadet: #5d737e;
+  --white: #fcfcfc;
+  --platinum: #e7e5df;
+  --orangered: #f26430;
+  --lightgrey: #cfd8d7;
+}
 
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--lightgrey);
+}
+
+/* unvisited link */
+a:link {
+  color: var(--platinum);
+}
+
+/* visited link */
+a:visited {
+  color: var(--orangered);
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
 }
 
 /* header styles */
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    justify-content: right;
-    text-align: -webkit-right;}
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  justify-content: left;
+  display: inline-flex;
+  background-color: var(--onynx);
+  color: var(--platinum);
+  justify-content: left;
+  align-items: center;
+}
 
 .header h1 {
-    font-size: 200%;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    background-color: aqua;
-    color: blue;
-    margin: 0;
+  font-size: 200%;
+  font-weight: bold;
+  height: auto;
+  margin: 0;
+  width: 800px;
 }
 
 .header ul {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    padding: 0;
-    font-size: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding-right: 50px;
+  font-size: 100%;
+  text-align: center;
+  justify-content: right;
+  width: 550px;
 }
 
-.header li {
-    list-style: none;
-    width: 150px;
-    margin: 0;
+.header li a {
+  list-style: none;
+  width: 800px;
+  margin: 0;
+  padding: 10px;
+  color: var(--platinum);
+  width: max-content;
 }
 
 /* class hero styles */
 .hero {
-    display: flex;
-    height: 300px;
-    width: 100vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/mnbk-skyline.jpeg");
-    background-size: auto;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-    flex-direction: column;
+  display: flex;
+  height: 200px;
+  width: 100vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url("../images/abstract_img.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--platinum);
+  flex-direction: column;
 }
 
 .hero h2 {
-    font-size: 125%;
-    text-align: right;
+  font-size: 125%;
+  text-align: right;
+  justify-content: center;
 }
 
 .hero p {
-    font-size: 100%;
-    align-content: center;
+  font-size: 100%;
+  align-content: center;
 }
 
+/* Border styles */
+.border {
+  display: flex;
+  border-right: 3px solid #bfa161;
+  width: 60px;
+}
+
+.footer {
+  display: flex;
+}
+.footer ul,
+li {
+  list-style: none;
+  justify-content: space-around;
+}
