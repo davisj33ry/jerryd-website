@@ -33,6 +33,7 @@ a:visited {
 /* mouse over link */
 a:hover {
   background-color: var(--orangered);
+  opacity: 0.5;
 }
 
 /* selected link */
@@ -97,7 +98,7 @@ a:active {
 }
 
 .hero h2 {
-font-size: 200%;
+  font-size: 200%;
   justify-content: center;
   padding: 0px 0px 0px 885px;
   margin: 100px 0 0 0px;
@@ -106,19 +107,20 @@ font-size: 200%;
 h3 {
   font-size: 100%;
   text-align: right;
-  padding: 0px 5px 0px 0px;
-  margin: 30px 0px 0px -5px;
+  padding: 0px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   scroll-margin-top: 100px;
 }
 
 /* Border styles */
 .border {
-border-right: 3px solid var(--cadet);
-  display: flow-root;
+  border-right: 3px solid var(--cadet);
+  display: flex;
   width: 100px;
+  height: auto;
   font-size: 175%;
   padding: 0px 0px 0px 100px;
-  margin: 10px 0px 30px 0px;
+  margin: 10px 0px 30px 100px;
 }
 
 article p {
@@ -132,11 +134,14 @@ article p {
   display: block;
   width: 955px;
   height: 400px;
-  margin: 0px 0px 0px 125px;
-  background-image: url("../images/digital-marketing-meeting.jpg");
+  padding: 5px 0px 0px 0px;
+  margin: 0px 0px 10px 125px;
+  background-image: url(../images/digital-marketing-meeting.jpg);
   background-position: center;
-  background-size: 955px 400px;
+  background-size: 99% 98%;
+  background-repeat: no-repeat;
   position: relative;
+  border: solid 2px var(--richblack);
 }
 
 #main_proj_img_txt {
@@ -163,9 +168,10 @@ article p {
   padding: 10px 0px 0px 10px;
   background-image: url("../images/digital-marketing-meeting.jpg");
   background-position: center;
-  background-size: 468px 200px;
+  background-size: 98% 97%;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 2px var(--richblack);
 }
 
 .sec_proj_img_column a {
@@ -176,9 +182,10 @@ article p {
   padding: 10px 0px 0px 0px;
   background-image: url(../images/digital-marketing-meeting.jpg);
   background-position: center;
-  background-size: 467px 200px;
+  background-size: 98% 97%;
   background-repeat: no-repeat;
   position: absolute;
+  border: solid 2px var(--richblack);
 }
 
 #sec_proj_img_txt {
@@ -195,18 +202,18 @@ article p {
   font-size: 50%;
 }
 
-footer {
+.footer {
   display: flex;
   width: 955px;
-  margin: 0px 0px 0px 30px;
+  margin: 10px px 0px 0px 0px;
 }
 
-footer ul {
+.footer ul {
   font-size: 0;
   list-style: none;
 }
 
-footer ul li {
+.footer ul li {
   font-size: initial;
   display: inline-flex;
   padding: 0px 0px 0px 36px;
