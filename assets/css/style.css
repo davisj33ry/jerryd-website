@@ -98,18 +98,23 @@ a:active {
 }
 
 .hero h2 {
+  display: flex;
   font-size: 200%;
   justify-content: center;
-  padding: 0px 0px 0px 885px;
+  align-items: flex-end;
+  padding: 0px 0px 0px 0px;
   margin: 100px 0 0 0px;
 }
 
 h3 {
-  font-size: 100%;
+  font-size: 96%;
   text-align: right;
   padding: 0px 0px 0px 0px;
   margin: 5px 0px 0px 0px;
   scroll-margin-top: 100px;
+  width: 20px;
+  height: 100px;
+  inline-size: max-content;
 }
 
 /* Border styles */
@@ -124,6 +129,10 @@ h3 {
 }
 
 article p {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  min-width: 600px;
+  flex-direction: row;
   width: 905px;
   margin: 15px 0px 0px 125px;
   font-size: initial;
@@ -142,6 +151,7 @@ article p {
   background-repeat: no-repeat;
   position: relative;
   border: solid 2px var(--richblack);
+  min-width: 600px;
 }
 
 #main_proj_img_txt {
@@ -163,6 +173,7 @@ article p {
   display: flex;
   float: left;
   width: 468px;
+  min-width: 234px;
   height: 200px;
   margin: 0px 0px 0px 125px;
   padding: 10px 0px 0px 10px;
@@ -177,6 +188,7 @@ article p {
 .sec_proj_img_column a {
   flex: 50%;
   width: 467px;
+  min-width: 234px;
   height: 200px;
   margin: 0px 0px 10px 10px;
   padding: 10px 0px 0px 0px;
@@ -221,9 +233,35 @@ article p {
   height: 50px;
 }
 
-/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+/* If the screen size is 600px or less */
 @media only screen and (max-width: 600px) {
-  div {
-    font-size: 30px;
+
+  .hero {
+    min-width: 600px;
+  }
+
+  .border,
+  h3 {
+    display: inline-block;
+    width: 1vw;
+  }
+
+article p {
+width: 1vmin;
+}
+
+section {
+ min-width: 600px;
+}
+  .footer ul,
+  li {
+    display: inline-block;
+    width: 45%;
+  }
+
+  .header ul,
+  li {
+    display: inline-block;
+    width: 45%;
   }
 }
