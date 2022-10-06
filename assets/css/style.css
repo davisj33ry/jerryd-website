@@ -8,6 +8,7 @@
   --orangered: #f26430;
   --lightgrey: #cfd8d7;
   --vividblue: #1ac8ed;
+  --bluesaph: #086375;
 }
 
 body {
@@ -26,12 +27,12 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: var(--orangered);
+  color: var(--bluesaph);
 }
 
 /* mouse over link */
 a:hover {
-  color: var(--vividblue);
+  background-color: var(--orangered);
 }
 
 /* selected link */
@@ -81,26 +82,6 @@ a:active {
   width: max-content;
 }
 
-/* header unvisited link */
-.header li a:link {
-  color: var(--white);
-}
-
-/* header visited link */
-.header li a:visited {
-  color: var(--orangered);
-}
-
-/* header mouse over link */
-.header li a:hover {
-  color: var(--vividblue);
-}
-
-/* header selected link */
-.header li a:active {
-  color: yellow;
-}
-
 /* class hero styles */
 .hero {
   display: flex;
@@ -116,15 +97,10 @@ a:active {
 }
 
 .hero h2 {
-  font-size: 200%;
+font-size: 200%;
   justify-content: center;
-  align-items: flex-end;
-  padding: 100px 0px 0px 0px;
-}
-
-.hero p {
-  font-size: 100%;
-  align-content: center;
+  padding: 0px 0px 0px 885px;
+  margin: 100px 0 0 0px;
 }
 
 h3 {
@@ -137,106 +113,86 @@ h3 {
 
 /* Border styles */
 .border {
-  display: block;
-  border-right: 3px solid var(--cadet);
+border-right: 3px solid var(--cadet);
+  display: flow-root;
   width: 100px;
   font-size: 175%;
-  margin: 0px 0px 20px 200px;
+  padding: 0px 0px 0px 100px;
+  margin: 10px 0px 30px 0px;
 }
 
 article p {
-    width: 905px;
-    margin: 15px 0px 0px 125px;
-    font-size: initial;
+  width: 905px;
+  margin: 15px 0px 0px 125px;
+  font-size: initial;
 }
-/* Main content styles */
-.mainbox {
-  display: flex;
-  flex-direction: row;
+
+/* Main project image content styles */
+.main_proj_img a {
+  display: block;
   width: 955px;
   height: 400px;
-  border: 1px solid #000;
-  text-align: left;
-  margin: 0px 25px 10px 125px;
+  margin: 0px 0px 0px 125px;
   background-image: url("../images/digital-marketing-meeting.jpg");
+  background-position: center;
   background-size: 955px 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: local;
-}
-
-.mainbox div {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  float: left;
-  margin-right: 5px;
-}
-
-.mainbox div span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-indent: 10px;
-  background-color: var(--lightgrey);
-  padding: 0px 147px 0px 0px;
-  margin: 0px 0px 15px 0px;
-  font-size: 50%;
-}
-
-.mainbox div a {
-  position: absolute;
-  width: 200px;
-  bottom: 30px;
-  left: 0;
-  font-size: 100%;
-  background-color: var(--lightgrey);
-  padding: 10px;
-  text-decoration: none;
-}
-
-.flexbox_container {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px 0px 10px 0px;
-  margin: 0px 0px 0px 120px;
-  height: 200px;
-}
-
-.flexbox_container div {
   position: relative;
-  margin: 5px;
-  background-image: url(../images/mnbk-skyline.jpeg);
-  background-size: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 0px 195px 0px 183px;
-  flex-grow: 0;
-  flex-basis: 96px;
-  flex-shrink: 0;
 }
 
-.flexbox_container div span {
-  position: absolute;
-  text-indent: 10px;
-  width: 200px;
-  bottom: 0px;
-  left: 0;
+#main_proj_img_txt {
   background-color: var(--lightgrey);
+  position: absolute;
+  bottom: 33px;
+  left: 1px;
   padding: 0px 20px 0px 0px;
-  margin: 0px 0px 15px 0px;
+  width: 200px;
+}
+
+#main_proj_img_txt span {
+  background-color: var(--lightgrey);
   font-size: 50%;
 }
 
-.flexbox_container div a {
+/* Secondary project image content styles */
+.sec_proj_img_row a {
+  display: flex;
+  float: left;
+  width: 468px;
+  height: 200px;
+  margin: 0px 0px 0px 125px;
+  padding: 10px 0px 0px 10px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-position: center;
+  background-size: 468px 200px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sec_proj_img_column a {
+  flex: 50%;
+  width: 467px;
+  height: 200px;
+  margin: 0px 0px 10px 10px;
+  padding: 10px 0px 0px 0px;
+  background-image: url(../images/digital-marketing-meeting.jpg);
+  background-position: center;
+  background-size: 467px 200px;
+  background-repeat: no-repeat;
   position: absolute;
-  width: 200px;
-  bottom: 30px;
-  left: 0;
-  font-size: 100%;
+}
+
+#sec_proj_img_txt {
   background-color: var(--lightgrey);
-  padding: 10px;
-  text-decoration: none;
+  position: absolute;
+  bottom: 33px;
+  left: 1px;
+  padding: 0px 20px 0px 0px;
+  width: 200px;
+}
+
+#sec_proj_img_txt span {
+  background-color: var(--lightgrey);
+  font-size: 50%;
 }
 
 footer {
