@@ -7,6 +7,7 @@
   --platinum: #e7e5df;
   --orangered: #f26430;
   --lightgrey: #cfd8d7;
+  --vividblue: #1ac8ed;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 
 /* unvisited link */
 a:link {
-  color: var(--platinum);
+  color: var(--cadet);
 }
 
 /* visited link */
@@ -30,7 +31,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: red;
+  color: var(--vividblue);
 }
 
 /* selected link */
@@ -49,10 +50,11 @@ a:active {
   color: var(--platinum);
   justify-content: left;
   align-items: center;
+  width: 100%;
 }
 
 .header h1 {
-  font-size: 200%;
+  font-size: 250%;
   font-weight: bold;
   height: auto;
   margin: 0;
@@ -79,13 +81,31 @@ a:active {
   width: max-content;
 }
 
+/* header unvisited link */
+.header li a:link {
+  color: var(--white);
+}
+
+/* header visited link */
+.header li a:visited {
+  color: var(--orangered);
+}
+
+/* header mouse over link */
+.header li a:hover {
+  color: var(--vividblue);
+}
+
+/* header selected link */
+.header li a:active {
+  color: yellow;
+}
+
 /* class hero styles */
 .hero {
   display: flex;
   height: 200px;
-  width: 100vw;
-  margin-top: 0;
-  margin-bottom: 0;
+  width: 100%;
   background-image: url("../images/abstract_img.jpg");
   background-size: auto;
   background-position: center;
@@ -96,9 +116,10 @@ a:active {
 }
 
 .hero h2 {
-  font-size: 125%;
-  text-align: right;
+  font-size: 200%;
   justify-content: center;
+  align-items: flex-end;
+  padding: 100px 0px 0px 0px;
 }
 
 .hero p {
@@ -106,18 +127,140 @@ a:active {
   align-content: center;
 }
 
-/* Border styles */
-.border {
-  display: flex;
-  border-right: 3px solid #bfa161;
-  width: 60px;
+h3 {
+  font-size: 100%;
+  text-align: right;
+  padding: 0px 5px 0px 0px;
+  margin: 30px 0px 0px -5px;
+  scroll-margin-top: 100px;
 }
 
-.footer {
-  display: flex;
+/* Border styles */
+.border {
+  display: block;
+  border-right: 3px solid var(--cadet);
+  width: 100px;
+  font-size: 175%;
+  margin: 0px 0px 20px 200px;
 }
-.footer ul,
-li {
+
+article p {
+    width: 905px;
+    margin: 15px 0px 0px 125px;
+    font-size: initial;
+}
+/* Main content styles */
+.mainbox {
+  display: flex;
+  flex-direction: row;
+  width: 955px;
+  height: 400px;
+  border: 1px solid #000;
+  text-align: left;
+  margin: 0px 25px 10px 125px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-size: 955px 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+.mainbox div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  float: left;
+  margin-right: 5px;
+}
+
+.mainbox div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-indent: 10px;
+  background-color: var(--lightgrey);
+  padding: 0px 147px 0px 0px;
+  margin: 0px 0px 15px 0px;
+  font-size: 50%;
+}
+
+.mainbox div a {
+  position: absolute;
+  width: 200px;
+  bottom: 30px;
+  left: 0;
+  font-size: 100%;
+  background-color: var(--lightgrey);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.flexbox_container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 120px;
+  height: 200px;
+}
+
+.flexbox_container div {
+  position: relative;
+  margin: 5px;
+  background-image: url(../images/mnbk-skyline.jpeg);
+  background-size: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px 195px 0px 183px;
+  flex-grow: 0;
+  flex-basis: 96px;
+  flex-shrink: 0;
+}
+
+.flexbox_container div span {
+  position: absolute;
+  text-indent: 10px;
+  width: 200px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--lightgrey);
+  padding: 0px 20px 0px 0px;
+  margin: 0px 0px 15px 0px;
+  font-size: 50%;
+}
+
+.flexbox_container div a {
+  position: absolute;
+  width: 200px;
+  bottom: 30px;
+  left: 0;
+  font-size: 100%;
+  background-color: var(--lightgrey);
+  padding: 10px;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  width: 955px;
+  margin: 0px 0px 0px 30px;
+}
+
+footer ul {
+  font-size: 0;
   list-style: none;
-  justify-content: space-around;
+}
+
+footer ul li {
+  font-size: initial;
+  display: inline-flex;
+  padding: 0px 0px 0px 36px;
+  margin: 0px 0px 0px 92px;
+  height: 50px;
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div {
+    font-size: 30px;
+  }
 }
