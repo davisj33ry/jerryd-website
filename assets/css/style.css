@@ -169,40 +169,38 @@ article p {
 }
 
 /* Secondary project image content styles */
-.sec_proj_img_row a {
+.flexparent {
   display: flex;
-  float: left;
-  width: 468px;
-  min-width: 234px;
-  height: 200px;
-  margin: 0px 0px 0px 125px;
-  padding: 10px 0px 0px 10px;
-  background-image: url("../images/digital-marketing-meeting.jpg");
-  background-position: center;
-  background-size: 98% 97%;
-  background-repeat: no-repeat;
-  position: relative;
-  border: solid 2px var(--richblack);
+  flex-direction: row;
 }
 
-.sec_proj_img_column a {
-  flex: 50%;
-  width: 467px;
-  min-width: 234px;
+.sec_proj_img_row a {
+  width: 460px;
   height: 200px;
-  margin: 0px 0px 10px 10px;
-  padding: 10px 0px 0px 0px;
-  background-image: url(../images/digital-marketing-meeting.jpg);
+  margin: 10px 0px 0px 125px;
+  padding: 0px 0px 0px 10px;
+  background-image: url("../images/digital-dream-2-1456675.jpg");
   background-position: center;
   background-size: 98% 97%;
   background-repeat: no-repeat;
-  position: absolute;
   border: solid 2px var(--richblack);
+float: left;}
+
+.sec_proj_img_column a {
+  width: 460px;
+  height: 200px;
+  margin: 10px 0px 0px 10px;
+  padding: 0px 0px 0px 10px;
+  background-image: url("../images/pexels-aleksandar-pasaric-2603464.jpg");
+  background-position: center;
+  background-size: 98% 97%;
+  background-repeat: no-repeat;
+  border: solid 2px var(--richblack);
+  float: right;
 }
 
 #sec_proj_img_txt {
   background-color: var(--lightgrey);
-  position: absolute;
   bottom: 33px;
   left: 1px;
   padding: 0px 20px 0px 0px;
@@ -235,7 +233,6 @@ article p {
 
 /* If the screen size is 600px or less */
 @media only screen and (max-width: 600px) {
-
   .hero {
     min-width: 600px;
   }
@@ -246,13 +243,13 @@ article p {
     width: 1vw;
   }
 
-article p {
-width: 1vmin;
-}
+  article p {
+    width: 1vmin;
+  }
 
-section {
- min-width: 600px;
-}
+   section {
+    min-width: 600px;
+  }
   .footer ul,
   li {
     display: inline-block;
